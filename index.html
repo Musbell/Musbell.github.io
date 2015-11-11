@@ -89,6 +89,12 @@
         $('.slider').slider('next');
         // Previous slide
         $('.slider').slider('prev');
+        $(document).ready(function () {
+            $('.tooltipped').tooltip({ delay: 50 });
+        });
+        // This will remove the tooltip functionality for the buttons on this page
+        $('.tooltipped').tooltip('remove');
+
     </script>
     <script src="js/main.js"></script>
     <!--Import jQuery before materialize.js-->
