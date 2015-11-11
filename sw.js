@@ -12,12 +12,12 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('push', function(event) {
   console.log('Push message received', event);
   // TODO: Step 6
-var title = 'Push message';
+var title = 'Hello!';
 
   event.waitUntil(
     self.registration.showNotification(title, {
      body: 'Welcome to Devfest 2015',
-     icon: 'images/icon.png',
+     icon: 'googledev.png',
      tag: 'my-tag'
    }));
 
