@@ -75,8 +75,8 @@
             </div>
         </div>
     </footer>
-    <div class="tooltipped fixed-action-btn" data-position="bottom" data-delay="50" data-tooltip="I am tooltip" style="bottom: 45px; right: 24px;">
-        <a class="btn-floating btn-large red">
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large red tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">
             <i class="large material-icons">volume_up</i>
         </a>
     </div>
@@ -89,6 +89,12 @@
         $('.slider').slider('next');
         // Previous slide
         $('.slider').slider('prev');
+        $(document).ready(function () {
+            $('.tooltipped').tooltip({ delay: 50 });
+        });
+        // This will remove the tooltip functionality for the buttons on this page
+        $('.tooltipped').tooltip('remove');
+
     </script>
     <script src="js/main.js"></script>
     <!--Import jQuery before materialize.js-->
