@@ -1,6 +1,7 @@
 {
   "name": "Push Notifications Devfest",
   "gcm_sender_id": "642772049910",
+  "display": "fullscreen",
   "icons": [{  
         "src": "googledev.png",  
         "sizes": "192x192",
