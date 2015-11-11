@@ -27,7 +27,7 @@
     </style>
 </head>
 
-<body>
+<body onload="Materialize.showStaggeredList('#cloud'); Materialize.fadeInImage('#devest')">
     <header>
         <div class="navbar-fixed">
             <nav class="purple darken-4">
@@ -61,10 +61,10 @@
             <div class="row">
                 <div class="col l4 s12">
                     <h5 class="black-text">Get into the cloud</h5>
-                    <img src="gcp1.png" alt="google cloud" class="hoverable responsive-img" />
+                    <img src="gcp1.png" alt="google cloud" class="hoverable responsive-img" id="cloud" />
                 </div>
                 <div class="col l6 offset-l2 s12">
-                    <img src="devfest.png" class="responsive-img" />
+                    <img src="devfest.png" class="responsive-img" id="devfest" />
                 </div>
             </div>
         </div>
