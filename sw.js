@@ -16,7 +16,7 @@ var title = 'Push message';
 
   event.waitUntil(
     self.registration.showNotification(title, {
-     body: 'This is flexisaf',
+     body: 'Welcome to Devfest 2015',
      icon: 'images/icon.png',
      tag: 'my-tag'
    }));
