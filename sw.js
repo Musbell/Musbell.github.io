@@ -14,12 +14,12 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('push', function(event) {
   console.log('Push message', event);
 
-  var title = 'Push message';
+  var title = 'Hello!';
 
   event.waitUntil(
     self.registration.showNotification(title, {
-     body: 'The Message',
-     icon: 'images/icon.png'
+     body: 'Welcome to Devfest Nothwest Region 2015',
+     icon: 'googledev.png'
    }));
 });
 
