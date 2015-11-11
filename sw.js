@@ -16,7 +16,7 @@ var title = 'Hello!';
 
   event.waitUntil(
     self.registration.showNotification(title, {
-     body: 'Welcome to Devfest 2015',
+     body: 'Welcome to Devfest Northwest Region 2015',
      icon: 'googledev.png',
      tag: 'my-tag'
    }));
