@@ -1,3 +1,5 @@
+'use strict';
+
 var reg;
 var sub;
 var isSubscribed = false;
