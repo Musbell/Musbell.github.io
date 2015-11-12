@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
-    <link href="css/materialize.css" rel="stylesheet" />
+    <link href="css/materialize.min.css" rel="stylesheet" />
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
     <script src="https://cdn.smtcs.rocks/jq/2.js"></script> <!-- For v2.1.1 -->
-    <script src="https://cdn.smtcs.rocks/jq/1.js"></script> <!-- For v1.11.1 -->
+    <!--<script src="https://cdn.smtcs.rocks/jq/1.js"></script>--> <!-- For v1.11.1 -->
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -26,6 +26,16 @@
         main {
             flex: 1 0 auto;
         }
+         header, main, footer {
+    padding-left: 240px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+       
     </style>
 </head>
 
@@ -34,20 +44,21 @@
         <div class="navbar-fixed">
             <nav class="purple darken-4">
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">Devfest 2015</a>
-                    <a href="#" data-activates="mobile-demo slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <a href="#!" class="brand-logo" style="padding-left:50px;">Devfest 2015</a>
+                   
                     <ul class="right hide-on-med-and-down">
                         <li><a href="sass.html">Sass</a></li>
                         <li><a href="badges.html">Components</a></li>
                         <li class="active"><a href="collapsible.html">JavaScript</a></li>
                     </ul>
-                    <ul id="slide-out" class="side-nav">
+                    <ul id="slide-out" class="side-nav fixed" style="background-color:black">
                         <li><a href="sass.html">Sass</a></li>
                         <li><a href="badges.html">Components</a></li>
                         <li><a href="collapsible.html">Javascript</a></li>
                         <li><a href="mobile.html">Mobile</a></li>
                     </ul>
-                   <!-- <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>-->
+                    <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a><!--mobile-demo-->
+                    <!--<a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>-->
                 </div>
             </nav>
         </div>
@@ -91,14 +102,10 @@
         </a>
     </div>
     <script>
-        // Pause slider
-        $('.slider').slider('pause');
-        // Start slider
-        $('.slider').slider('start');
-        // Next slide
-        $('.slider').slider('next');
-        // Previous slide
-        $('.slider').slider('prev');
+        // Show sideNav
+        $('.button-collapse').sideNav('show');
+        // Hide sideNav
+        $('.button-collapse').sideNav('hide');
         // $(document).ready(function () {
         //$('.tooltipped').tooltip({ delay: 50 });
         //});
@@ -108,15 +115,24 @@
         $(".button-collapse").sideNav();
         // Initialize collapsible (uncomment the line below if you use the dropdown variation)
         //$('.collapsible').collapsible();
+        $('.button-collapse').sideNav({
+            menuWidth: 300, // Default is 240
+            edge: 'right', // Choose the horizontal origin
+            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+  );
+
         // Show sideNav
         $('.button-collapse').sideNav('show');
         // Hide sideNav
         $('.button-collapse').sideNav('hide');
+
+
     </script>
     <script src="js/main.js"></script>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/materialize.min.js"></script>
+    <!--Import jQuery before materialize.js-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
 </body>
 </html>
